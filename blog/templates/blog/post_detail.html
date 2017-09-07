@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+    <main class="main">
+        <article class="post">
+            <header class="post__head">
+                <time class="post__time">
+                    {{ post.published_date }}
+                </time>
+                <h1 class="post__title">
+                    <a href="{% url 'post_detail' post_id=post.pk %}">
+                        {{ post.title }}
+                    </a>
+                </h1>
+
+                <div class="post__main echo">
+                    <p>{{ post.text  | safe | linebreaksbr }}</p>
+                </div>
+            </header>
+        </article>
+    </main>
+{% endblock %}

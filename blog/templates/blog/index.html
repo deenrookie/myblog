@@ -1,0 +1,36 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html class="index" lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Deen">
+    <title>Deen's blog</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fancybox.css' %}">
+    <link rel="stylesheet" href="{% static 'js/particles.min.js' %}">
+    <link rel="stylesheet" href="{% static 'js/particles.oli.js' %}">
+    <!--[if lt IE 9]>
+<script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script>
+<![endif]-->
+    <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'js/fancybox/jquery.fancybox.min.js' %}"></script>
+</head>
+<body>
+<div class="hide" id="particles-oli-wrapper">
+</div>
+<div class="index-wrapper">
+    <header class="head index hide">
+        <h1 class="head-title u-fl" style="font-family: Monaco,monospace">Deen's blog</h1>
+        <nav class="head-nav u-fr">
+            <ul class="head-nav__list">
+                <li class="head-nav__item"><a class="head-nav__link" href="{% url 'post_list' %}">カタログ/（目录）</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<script src={% static 'js/particles.min.js' %}></script>
+<script src={% static 'js/particles.oli.js' %}></script>
+</body>
+</html>
